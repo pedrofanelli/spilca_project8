@@ -1,13 +1,20 @@
 package org.example.spilca_project8;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import config.ProjectConfig;
+
 /**
- * Hello world!
+ * Dependency Injection and Abstraction using Spring!
  *
  */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+    	AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ProjectConfig.class);
+    	
+    	
+    	context.close();
     }
 }
